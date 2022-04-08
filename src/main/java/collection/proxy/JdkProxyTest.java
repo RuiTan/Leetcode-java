@@ -22,6 +22,10 @@ public class JdkProxyTest {
         public void send(String message) {
 //            System.out.println("send " + message);
         }
+
+        public void sendNoOverride(String message){
+
+        }
     }
 
     @AllArgsConstructor

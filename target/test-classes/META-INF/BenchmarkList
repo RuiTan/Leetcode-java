@@ -1,2 +1,0 @@
-JMH S 18 vip.trgg.ProxyTest S 48 vip.trgg.generated.ProxyTest_measureName_jmhTest S 11 measureName S 11 AverageTime E A 1 1 1 E E E E I 1 5 E E E E E E E E E U 11 NANOSECONDS E E 
-JMH S 18 vip.trgg.ProxyTest S 49 vip.trgg.generated.ProxyTest_measureCGLib_jmhTest S 12 measureCGLib S 11 AverageTime E A 1 1 1 E E E E I 1 5 E E E E E E E E E U 11 NANOSECONDS E E 
