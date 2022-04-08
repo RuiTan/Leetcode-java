@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Leetcode" />
+        <module name="Leetcode-java" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
