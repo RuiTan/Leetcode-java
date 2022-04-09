@@ -1,6 +1,6 @@
-package labuladong;
+package leetcode;
 
-public class Fibonacci {
+public class P509 {
     int fib(int n){
         if (n == 0 || n == 1){
             return n;
@@ -15,6 +15,6 @@ public class Fibonacci {
     }
 
     public static void main(String[] args) {
-        System.out.println(new Fibonacci().fib(6));
+        System.out.println(new P509().fib(6));
     }
 }

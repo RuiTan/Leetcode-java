@@ -1,8 +1,8 @@
-package labuladong;
+package leetcode;
 
 import java.util.Arrays;
 
-public class CoinChange {
+public class P322 {
     int recursion(int[] coins, int amount){
         if (amount == 0) {
             return 0;
@@ -20,9 +20,23 @@ public class CoinChange {
         }
         return res == Integer.MAX_VALUE ? -1 : res;
     }
-    int coinChange(int[] coins, int amount){
+    public int coinChange(int[] coins, int amount){
 //        return recursion(coins, amount);
         return dpTable(coins, amount);
+    }
+
+    public int coinChangeDP(int[] coins, int amount) {
+        int[] dp = new int[amount+1];
+        dp[0] = 0;
+        for (int i = 1; i <= amount; i++){
+            dp[i] = -1;
+            for (int c : coins){
+                if (i < c || dp[i-c] == -1) continue;
+                dp[i] = dp[i] == -1 ? dp[i-c] + 1 : Integer.min(dp[i-c]+1, dp[i]);
+            }
+        }
+        System.out.println(Arrays.toString(dp));
+        return dp[amount];
     }
 
     int dpTable(int[] coins, int amount){
@@ -41,6 +55,6 @@ public class CoinChange {
 
     public static void main(String[] args) {
 //        System.out.println(new CoinChange().coinChange(new int[]{1, 5}, 21));
-        System.out.println(new CoinChange().coinChange(new int[]{2}, 3));
+        System.out.println(new P322().coinChangeDP(new int[]{2}, 3));
     }
 }
